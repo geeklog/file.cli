@@ -1,0 +1,47 @@
+{
+  "name": "file.cli",
+  "version": "0.0.1",
+  "description": "Command line tools for manipulate files and directories",
+  "main": "index.js",
+  "bin": {
+    "fo": "index.js"
+  },
+  "repository": "https://github.com/geeklog/file.cli",
+  "author": "Geeklog",
+  "license": "MIT",
+  "scripts": {
+    "pub-dev": "tsc -d && pushd . && cp package.json dist && cp README.md dist && cd dist && npm link || popd",
+    "pub": "tsc -d && pushd . && cp package.json dist && cp README.md dist && cd dist && npm publish || popd",
+    "build": "tsc -d",
+    "test": "jest"
+  },
+  "keywords": [
+    "file",
+    "directory",
+    "commandline",
+    "cli",
+    "tools",
+    "node.js",
+    "javascript",
+    "typescript"
+  ],
+  "dependencies": {
+    "commander": "^6.2.1",
+    "fs-extra": "^9.0.0",
+    "lodash": "^4.17.21",
+    "mime-types": "^2.1.27",
+    "promise-async": "^0.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-typescript": "^7.22.5",
+    "@jest/globals": "^29.6.2",
+    "@types/commander": "^2.12.2",
+    "@types/lodash": "^4.14.197",
+    "@types/node": "^14.18.54",
+    "eslint": "^6.8.0",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^4.0.3"
+  }
+}
